@@ -39,7 +39,7 @@ public class PersonController {
     }
 
     @RequestMapping("/person/age/{personAge}")
-    public List<Person> getPersonByDob(@PathVariable Integer personAge, Model model) {
+    public List<Person> getPersonByAge(@PathVariable Integer personAge, Model model) {
         List<Person> personByAge = personService.getPersonByAge(personAge);
         model.addAttribute("personByAge", personByAge);
         return personByAge;
@@ -50,12 +50,12 @@ public class PersonController {
         return personService.getPersons();
     }
 
-    @PostMapping(value = "/add")
+    @PostMapping(value = "/person/add")
     public void addPerson(@RequestBody Person person) {
         personService.addPerson(person);
     }
 
-    @PutMapping(value = "/update/{personId}")
+    @PutMapping(value = "/person/update/{personId}")
     public void updatePerson(@RequestBody Person person, @PathVariable long personId) {
         personService.updatePerson(person, personId);
     }
