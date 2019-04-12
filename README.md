@@ -7,12 +7,12 @@ When given an age (e.g., 45) the service will pull person records for people age
 ##### Person model
 
     Person
-        Name
-        Dob
-        Address
-        Height
-        Weight
-        Age
+        String Name
+        Date Dob
+        String Address
+        int Height
+        int Weight
+        Integer Age
 
 The application employs an in-memory H2 database and the API can be tested using [Postman](https://www.getpostman.com/).
 
