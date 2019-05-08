@@ -36,12 +36,10 @@ To run:
 ###### POST / add Person
     /person/add
     
- ###### PUT / update Person by personId
+###### PUT / update Person by personId
     /person/update/{personId}
-
     
+##### TODOs
 
-
-
-
- 
+* Implement Swagger
+* Write tests
